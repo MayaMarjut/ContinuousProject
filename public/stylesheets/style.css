@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  padding: 2em;
+  font-family:'Nunito Sans', sans-serif;
+  grid-auto-rows: 500px;
+  justify-items: center;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  grid-auto-flow: row;
+}
+h1 {
+  margin-top: 60px;
+  font-family:'Montserrat', sans-serif;
+}
+header {
+  padding: 0;
+  text-align: center;
+  grid-row: 1;
+  grid-column: 1  / span 4;
+}
+/* .box {
+  box-sizing: border-box;
+  border: 1px solid blue;
+} */
+
+.fa-info-circle {
+  color: #b31aff;
+  /* color: #b3b3b3; */
+}
+.fa-info-circle:hover {
+  color:#7700b3;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color:#b31aff;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  padding: 10px;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #7700b3 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* TÄHÄN ASTI LISÄTTY  */
+.wrapper {   
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(7,100px);
+  align-items: inherit;
+  grid-gap: 10px;
+  box-sizing: border-box;
+}
+.a {
+  padding-left: 15px;
+  grid-row: 2;
+  grid-column: 1  / span 4;
+  padding: 20px;
+}
+/* .a:focus-within {
+  font-weight: bold;
+}
+.b:focus-within {
+  font-weight: bold;
+} */
+/* .a:active {
+  font-weight: bold;
+}
+
+#source:focus {
+  font-weight: bold;
+}  */
+.b {
+  padding-left: 25px;
+  grid-row: 3 / span 2;
+  grid-column: 1  / span 4;
+  padding: 20px;
+}
+.c {
+  padding-left: 15px;
+  grid-row: 5;
+  grid-column: 1 / span 4;
+  padding: 20px;
+}  
+.d {
+  padding-left: 15px;
+  grid-row: 6;
+  grid-column: 1/span 2;
+  padding: 20px;
+}
+.e {
+  padding-left: 15px;
+  grid-row: 6;
+  grid-column: 3/span 2;
+  padding: 20px;
+} 
+.f {
+  padding-left: 15px;
+  grid-row: 7;
+  grid-column: 1  / span 2;
+  padding: 20px;
+} 
+.g {
+  padding-left: 15px;
+  grid-row: 8;
+  grid-column: 1/ span 2;
+  padding: 20px;
+}
+.h {
+  padding-left: 15px;
+  grid-row: 7;
+  grid-column: 3 / span 2;
+  padding: 20px;
+}
+.NappiClass {
+  padding-left: 15px;
+  grid-row: 8;
+  grid-column: 3 /span 2;
+}
+#addButton {
+  margin-top: 20px;
+  width: 250px;
+  height: 50px; 
+  border: 2px solid#cc66ff;
+  border-radius: 40px;
+  background-color:#cc66ff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color:black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.b label {
+  padding-left: 0;
+}
+label {
+  font-weight: 200;
+  font-size: 20px;
+  padding-left: 10px;
+}
+input  {
+  grid-column: 1 / 2;
+  font-size: 20px;
+  /* border-radius: 20px; */
+  border: 0.5px solid #eee;
+  background-color: #eee;
+  height: 30px;
+} 
+#timeSpend{
+  padding-bottom: 0px;
+}
+input[type=range]:before {
+   content: attr(min); 
+   padding-right: 5px; 
+}
+input[type=range]:after { 
+  content: attr(max); 
+  padding-left: 5px; 
+}
+.radio {
+  width: 20px;
+  height: 24px;
+  background-color: #eee;
+  border-style: none;
+}
+textarea {
+  margin-top: 10px;
+  /* border-radius: 10px;*/
+  border: 0.5px solid #eee; 
+  padding-left: 40px;
+  background-color: #eee;
+  width: 75%;
+}
+/* #toivelista {
+  font-size: 24px;
+  line-height: 23px;
+  list-style: none;
+} */
+table {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 26px;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+} 
+thead {
+  padding: 10px;
+  /* background-color: #7700b3; */
+  text-align: left;
+}
+th {
+  padding-top: 50px;
+  width: 100%;
+  padding-bottom: 5px;
+  /* background-color: #7700b3; */
+  text-align: left;
+  padding-bottom: 30px;
+}
+ tr {
+ /* background-color: #eee;  */
+  border-bottom: 1px solid #eee;
+} 
+.bSarke{
+  text-align: right;
+  font-size: 20px;
+  align-items: baseline;
+}
+/* .far.fa-trash-alt::before{
+  margin: 0px;
+  width: 100px;
+  height: 100px;
+} */
+#poistaNappi{
+  /* padding: 0;
+  margin: 0;*/
+  width: 100px;
+  height: 50px;
+  border-collapse: collapse;
+  padding: 0;
+  border-style: none;
+  background: none;
+}
+/* #output {
+  padding: 10px;
+  font-size: 24px;
+  line-height: 23px;
+  list-style: none;
+} */
+
+@media only screen and (max-width: 640px) {
+  body {
+      /* width: 100%; 
+      position: relative;
+      grid-template-columns: 1fr 1fr; */
+      align-content: center;
+      align-content: center;
+      justify-content: center;
+      align-items: stretch;
+      
+  }
+ 
+  .wrapper {
+      /* align-content: center;
+      justify-content: center;
+      align-items: stretch; */
+      /* position: relative; */
+      justify-content: center;
+      align-items: stretch;
+      grid-template-columns: repeat (1fr, 4);
+      /* grid-template-rows: repeat(1fr,10) ; */
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas: 
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h"
+      "button";
+  }
+  header {
+      grid-area: header;
+      grid-row: 1;
+      grid-column: 1 /span 4;
+  }
+  .a {
+      grid-area: a;
+      grid-row: 2;
+      grid-column: 1 /span 4;
+      align-items: center;
+      justify-content: center;
+    }
+    .b {
+      grid-area: b;
+      grid-row: 3 /5;
+      grid-column: 1 /span 4;
+    }
+    .c {
+      grid-area: c;
+      grid-row: 5;
+      grid-column: 1 /span 4;
+    }
+    .d {
+      grid-area: d;
+      grid-row: 6;
+      grid-column: 1 /span 4;
+    }
+    .e {
+      grid-area: e;
+      grid-row: 7;
+      grid-column: 1 /span 4;
+
+    }
+    .f {
+      grid-area: f;
+      grid-row: 8;
+      grid-column: 1 /span 4;
+    }
+    .g {
+      grid-area: g;
+      grid-row: 9;
+      grid-column: 1 /span 4;
+    }
+    .h {
+      grid-area: h;
+      grid-row: 10;
+      grid-column: 1 /span 4;
+    }
+    textarea {
+        width: 240px;
+    }
+      #lista {
+          grid-row: 13; 
+          grid-column: 2 / 3;
+      }  
+      .wrapper > div{
+          text-align: center;
+          padding-left: 0;
+      }
+      .NappiClass {
+          grid-area: button;
+          grid-column: 1/ span 4;
+          grid-row: 11;
+      }
+}

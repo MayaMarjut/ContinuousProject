@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/705dc20d7a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,800,900&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:700,800,900&display=swap');
+    </style>
+     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>   
+</head>
+    <body>
+        <form id="myData" name="myForm">
+        <div class="wrapper">
+            
+            <header class="box">
+                <h1>Add new topic:</h1>
+            </header>
+            <div class="a box">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="topicTitle" required><br> 
+            </div>
+            <div class="b box">
+                <div><label for="description">Description:</label><div class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">Give a brief description of your topic</span></div></div>
+                <textarea id="description" name="topicDesciption" rows="9" cols="93"></textarea></input><br>
+            </div>
+            <div class="c box">
+                <label for="source">Source:</label><div class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">Where you found the study material</span></div><br>
+                <input type="text" id="source" name="topicSource"></input><br>
+            </div>
+            <div class="d box">
+                <label for="startLearningDate">Start learning date:</label><div class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">The first day of study</span></div><br>
+                <input type="date" id="startLearningDate" name="topicLstart"></input><br>
+            </div>
+            <div class="e box">
+                <label for="timeSpend">Time spend:</label><div class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">Write number of month / days / or hours you have spend on studying this topic</span></div><br>
+                <input type="text" placeholder="1 h 1 month" id="timeSpend" name="topicSpend"></input><br>
+            </div>
+            <div class="f box">
+                <label for="timeToMaster">Time to master:</label><div class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">The amount of time that it takes to master this topic </span></div><br>
+                <input type="text" placeholder="days/months/years" id="timeToMaster" name="topicMaster"></input><br>
+            </div>
+            <br>
+            <div class="g box">
+                <label for="inProg">In progress: </label><input type="radio" name="inProgress" class="radio" value="true" checked>Yes<input type="radio" name="inProgress" class="radio" value="false">No<br>
+            </div>
+            <div class="h box">
+                <label for="completionDate">Completion date:</label><div class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">The date when you compeleted / or are aiming to complete studying this topic </span></div><br>
+                <input type="text" id="completionDate" placeholder="01/01/2020" name="topicCompletion"></input><br>
+            </div>
+            <div class="NappiClass">
+            <button type="submit" id="addButton">Add</button>
+            </div>
+       </div>
+       </form>
+       <br>
+        <table id="toivelista">
+        </table>
+    </div>
+
+        <script src="javascripts/default.js"></script>
+    </body>    
+</html>
