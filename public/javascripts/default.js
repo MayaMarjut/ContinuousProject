@@ -302,7 +302,7 @@ function removeTopic(event){
     const kohde = event.target.dataset.deletoi;
     console.log(kohde);
 
-    fetch(`http://localhost:5000/api/topic/${kohde}`, {
+    fetch(`/api/topic/${kohde}`, {
         method: 'DELETE',
     })
         .then(function (res) {
