@@ -101,7 +101,7 @@ addButton.addEventListener('click', addTopic);
 
 function myFunction() {
     table.innerHTML="";
-    fetch("./api/topic")
+    fetch("/topic")
         .then(res => res.json())
         .then(aiheet => {
             for (i = 0; i < aiheet.length; i++) {
@@ -250,7 +250,7 @@ function addTopic() {
         jatkuu = "false";
     }
 
-    fetch("./api/topic", {
+    fetch("/topic", {
         method: "POST",
         headers: { "Content-Type" : "application/json"},
         body: JSON.stringify({title: title.value, description: description.value, source: source.value, timeSpend: timeS.value, timeToMaster: timeM.value, startLearningDate: startLD.value, inProgress: jatkuu, completionDate: cDate.value })
@@ -302,7 +302,7 @@ function removeTopic(event){
     const kohde = event.target.dataset.deletoi;
     console.log(kohde);
 
-    fetch(`/api/topic/${kohde}`, {
+    fetch(`/topic/${kohde}`, {
         method: 'DELETE',
     })
         .then(function (res) {
